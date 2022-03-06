@@ -1,12 +1,13 @@
-
-import './App.css';
+import Header from './components/Header'
+import { useState, useEffect } from 'react';
 
 function App() {
+  const [animeList, SetAnimeList] = useState([]);
+  const [topAnime, SetTopAnime] = useState([]);
+  const [search, SetSearch] = useState('');
   return (
     <div className="App">
-      <header className="App-header">
-        <h1> All Day Anime</h1>
-      </header>
+      <Header />
     </div>
   );
 }
