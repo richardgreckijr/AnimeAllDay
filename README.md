@@ -1,4 +1,4 @@
-# All Day Anime
-
-## Anime fan site created using [Jikan API](https://docs.api.jikan.moe/)
+=======
+# Anime All Day
+## anime fan site using [Jikan Api](https://docs.api.jikan.moe/)
 
