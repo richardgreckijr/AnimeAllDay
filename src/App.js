@@ -1,6 +1,7 @@
 import Header from './components/Header';
 import { useState, useEffect } from 'react';
 import SideBar from './components/SideBar';
+import MainContent from './components/MainContent';
 
 function App() {
   const [animeList, SetAnimeList] = useState([]);
@@ -12,6 +13,7 @@ function App() {
       <Header />
       <div className="content-wrap">
         <SideBar topAnime={topAnime} />
+        <MainContent />
       </div>
     </div>
   );
