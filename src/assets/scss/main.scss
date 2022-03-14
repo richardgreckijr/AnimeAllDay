@@ -1,114 +1,184 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
-    font-family: 'Fira Sans', sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Fira Sans", sans-serif;
 }
 
-header{
-    padding-top: 50px;
-    padding-bottom: 50px;
+@media screen and (max-width: 768px) {
+  .anime-list {
+    width: 100vw;
+    flex-wrap: wrap;
+  }
 
-    h1 {
-        // color: #AAA;
-        background: -webkit-linear-gradient(#AAA, #3d43f0);
+  .content-wrap {
+    aside {
+      nav {
+        display: none;
+      }
+    }
+  }
+}
+
+header {
+  padding-top: 3.1rem;
+  padding-bottom: 3.1rem;
+
+  h1 {
+    background: -webkit-linear-gradient(#aaa, #3d43f0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4.5rem;
+    font-weight: 400;
+    text-align: center;
+  }
+}
+
+.content-wrap {
+  display: flex;
+
+  aside {
+    flex: 1 1 15rem;
+    max-width: 15rem;
+    padding-right: 1rem;
+
+    nav {
+      padding-left: 1rem;
+      padding-right: 1rem;
+
+      h3 {
+        color: #aaa;
+        background: -webkit-linear-gradient(#aaa, #3d43f0);
         background-clip: text;
         -webkit-text-fill-color: transparent;
-        font-size: 72px;
+        font-size: 2rem;
         font-weight: 400;
         text-align: center;
+        margin-bottom: 2rem;
+      }
 
-    }
-}
+      a {
+        display: block;
+        padding: 0.5rem 1rem;
+        text-align: left;
+        color: #fff;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        background-color: #8488f5;
+        text-decoration: none;
+        transition: 1s;
+        transition-timing-function: ease;
 
-.content-wrap{
-    display: flex;
-
-    aside {
-        flex: 1 1 250px;
-        max-width: 250px;
-        padding-right: 16px;
-
-    nav { 
-        padding-left: 16px;
-        padding-right: 16px;
-
-        h3{
-            color: #AAA;
-            background: -webkit-linear-gradient(#AAA, #3d43f0);
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            font-size: 24px;
-            font-weight: 400;
-            text-align: center;
-            margin-bottom: 16px;
-            }
-
-            a {
-                display: block;
-                padding: 8px 16px;
-                text-align: left;
-
-                color: #FFF;
-                font-size: 16px;
-                margin-bottom: .5rem;
-
-                background-color: #8488f5;
-                text-decoration: none;
-                transition: 1s;
-                transition-timing-function: ease;
-                
-                &:hover{
-                background-image: linear-gradient(25deg, #AAA, #3d43f0);
-                background-clip: text;
-                background-color: #AAA;
-                color: transparent;
-                }
-            }
+        &:hover {
+          background-image: linear-gradient(25deg, #aaa, #3d43f0);
+          background-clip: text;
+          background-color: #aaa;
+          color: transparent;
         }
+      }
     }
+  }
 
-    main{
+  main {
+    flex: 1 1 0%;
+    padding: 0px 1rem;
+
+    a {
+      color: #aaa;
+      text-align: flex;
+      text-decoration: none;
+      transition: 1s;
+      transition-timing-function: ease;
+
+      &:hover {
+        background-color: #8488f5;
+        color: #8488f5;
+      }
+    }
+    .main-head {
+      display: flex;
+      justify-content: flex-end;
+
+      .search {
+        display: flex;
+        justify-content: flex-end;
         flex: 1 1 0%;
-        padding: 0px 16px;
 
-        .main-head{
-            display: flex;
-            justify-content: flex-end;
-            
-            .search{
-                display: flex;
-                justify-content: flex-end;
-                flex: 1 1 0%;
+        input {
+          appearance: none;
+          background: none;
+          outline: none;
+          border: none;
+          display: block;
+          width: 100%;
+          max-width: 25rem;
+          padding: 0.5rem;
+          border-radius: 62rem;
+          background-color: #8488f5;
+          color: rgb(0, 0, 0);
+          transition: 2s;
 
-                input {
-                    appearance: none;
-                    background: none;
-                    outline: none;
-                    border: none;
-                    display: block;
-                    width: 100%;
-                    max-width: 400px;
-                    padding: 6px;
-                    border-radius: 999px;
-                    background-color: #8488f5;
-                    color: #fff;
-                    transition: 2s;
+          ::placeholder {
+            color: rgb(255, 255, 255);
+          }
 
-                    ::placeholder{
-                        color: rgb(255, 255, 255) !important;
-                    }
-                    
-                    &:focus, &:valid{
-                        background-image: linear-gradient(90deg, rgba(245, 243, 243, 0.863), #3d43f0);
-                        background-clip: text;
-                        background-color: #AAA;
-                        color: transparent;
-                        
-                    }
-                }
-            }
+          &:focus,
+          &:valid {
+            background-image: linear-gradient(
+              90deg,
+              rgba(19, 18, 18, 0.247),
+              #3d43f0
+            );
+            background-clip: text;
+            background-color: #aaa;
+            color: transparent;
+          }
         }
+      }
     }
+
+    .anime-list {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 2rem;
+      margin: 2rem -0.5rem 0px;
+
+      .anime-card {
+        flex: 1 1 33.33%;
+        max-width: 33.33%;
+        padding: 1rem 0.5rem;
+
+        a {
+          text-decoration: none;
+        }
+        figure {
+          display: block;
+          margin-bottom: 1rem;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 21rem;
+            object-fit: cover;
+            border-radius: 1rem;
+            box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.15);
+
+            transition: 0.4s;
+          }
+        }
+        h3 {
+          color: #313131;
+        }
+
+        &:hover {
+          figure {
+            img {
+              box-shadow: 0px 0.5rem 2rem rgba(0, 0, 0, 0.25);
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+    }
+  }
 }

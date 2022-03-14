@@ -1,29 +1,22 @@
 import React from 'react'
 
-export default function Sidebar() {
+export default function Sidebar({ topAnime }) {
 
     return (
         <aside>
             <nav>
                 <h3>Top Anime</h3>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel='noreferrer'>
-                    Attack on Titan
-                </a>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel='noreferrer'>
-                    Jujutsu Kaisen
-                </a>
-                <a
-                    href="#"
-                    target="_blank"
-                    rel='noreferrer'>
-                    One Piece
-                </a>
+                {topAnime.map(anime => (
+
+                    <a
+                        href={anime.url}
+                        target="_blank"
+                        key={anime.mal_id}
+                        rel='noreferrer'>
+                        { anime.title}
+                    </a>
+                ))}
+
             </nav>
         </aside>
     )
